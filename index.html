@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <audio id="background-music" loop>
+        <source src="audio/your-audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Engineering Notes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        /* Style for Category Sections */
+        .category-section {
+            background-color: #f8f9fa; /* Background color for category sections */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for Category Links */
+        .category-link {
+            color: #007bff; /* Blue color for the links */
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .category-link:hover {
+            color: #0056b3; /* Darker blue color on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Style for Social Media Icons */
+        .social-media-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-media-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px; /* Adjust the size of the social media icons */
+            height: auto;
+        }
+
+        /* Style for Cover Photos */
+        .category-cover {
+            width: 100%;
+            height: 200px; /* Adjust the height of the cover photos */
+            object-fit: cover;
+        }
+
+        /* Style for GIF Section */
+        .gif-section {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px; /* Add margin to separate from content */
+        }
+
+        /* Clearfix to prevent layout issues */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Navbar Animation */
+        .navbar-fixed {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-hidden {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-fixed" style="background-color: #e3f2fd;">
+        <img src="https://toolsdealersindia.com/images/logo.png" alt="img" width="200">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-secondary font-weight-bold" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold" href="contact.html">Contact</a>
+
+                    <div id="music-status"></div>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-4">Welcome to Engineering Notes</h1>
+                <p class="lead">A place to find and share engineering notes.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="https://static.javatpoint.com/blog/images/types-of-engineering.png"
+                    alt="Engineering Types" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+                <div class="gif-section">
+                    <img src="GIFs/animation.gif" alt="Your GIF" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div id="notes"></div>
+
+    </div>
+
+    <!-- Java Category Section -->
+    <div class="category-section">
+        <img src="https://wallpapers.com/images/hd/hd-engineering-colorful-computer-circuit-board-0bgyx90tzqx86vss.jpg" alt="Java Cover" class="category-cover">
+        <h5 class="card-header">Java</h5>
+        <p>Explore Java programming with our comprehensive notes.</p>
+        <a href="https://www.geeksforgeeks.org/java/" class="category-link" target="_blank">Learn More</a>
+    </div>
+
+    <!-- C++ Category Section -->
+    <div class="category-section">
+        <img src="https://wallpapers.com/images/high/hd-engineering-computer-codes-2ivt8fgfkhx7faau.webp" alt="C++ Cover" class="category-cover">
+        <h5 class="card-header">C++</h5>
+        <p>Master C++ programming with our detailed notes.</p>
+        <a href="https://www.geeksforgeeks.org/c-plus-plus/" class="category-link" target="_blank">Learn More</a>
+    </div>
+
+    <!-- Python Category Section -->
+    <div class="category-section">
+        <img src="https://wallpapers.com/images/high/hd-engineering-computer-technology-9c4d0251f783p6zh.webp" alt="Python Cover" class="category-cover">
+        <h5 class="card-header">Python</h5>
+        <p>Dive into Python programming with our specialized notes.</p>
+        <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm" class="category-link"
+            target="_blank">Learn More</a>
+    </div>
+
+    <!-- Computer Graphics Category Section -->
+    <div class="category-section">
+        <img src="https://wallpapers.com/images/high/hd-engineering-circuit-board-close-up-2d6jajqcjfj68gw9.webp" alt="Computer Graphics Cover" class="category-cover">
+        <h5 class="card-header">Computer Graphics</h5>
+        <p>Discover the world of computer graphics with our engaging notes.</p>
+        <a href="https://www.geeksforgeeks.org/introduction-to-computer-graphics/" class="category-link"
+            target="_blank">Learn More</a>
+    </div>
+
+    <!-- Applied Math Category Section -->
+    <div class="category-section">
+        <img src="https://wallpapers.com/images/high/hd-engineering-mechanical-drawing-pg7gcjjs1p0sxd4p.webp" alt="Applied Math Cover" class="category-cover">
+        <h5 class="card-header">Applied Maths</h5>
+        <p>Enhance your math skills with our applied mathematics notes.</p>
+        <a href="https://www.geeksforgeeks.org/engineering-mathematics-tutorials/" class="category-link"
+            target="_blank">Learn More</a>
+    </div>
+
+    <!-- Footer with Social Media Icons -->
+    <footer class="text-white" style="background-color: #e3f2fd;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <ul class="social-media-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=100015463899182" target="_blank"><img
+                                    src="https://cdn4.iconfinder.com/data/icons/various-icons-2/476/Facebook.png"
+                                    alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/HarshAr76913034" target="_blank"><img
+                                    src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.1222169770.1702252800&semt=ais"
+                                    alt="Twitter"></a></li>
+                        <li><a href="https://www.instagram.com/myselfharshdev/" target="_blank"><img
+                                    src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-stunning-instagram-logo-vector-download-for-new-7.png"
+                                    alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #music-status {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('background-music');
+            var musicStatus = document.getElementById('music-status');
+            var navbar = document.querySelector('.navbar-fixed');
+
+            // Start music when the page loads
+            audio.play();
+
+            // Toggle music on emoji click
+            musicStatus.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+                updateEmoji(); // Update the emoji based on music status
+            });
+
+            // Update emoji based on music status
+            function updateEmoji() {
+                if (audio.paused) {
+                    musicStatus.textContent = '🔇';
+                } else {
+                    musicStatus.textContent = '🔈';
+                }
+            }
+
+            // Initial emoji update
+            updateEmoji();
+
+            // Navbar Animation on Scroll
+            var prevScrollPos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollPos > currentScrollPos) {
+                    navbar.style.transform = 'translateY(0)';
+                } else {
+                    navbar.style.transform = 'translateY(-100%)';
+                }
+
+                prevScrollPos = currentScrollPos;
+            };
+        });
+    </script>
+    <style>
+        #music-status {
+            cursor: pointer;
+            font-size: 24px; /* Adjust the size as needed */
+        }
+    </style>
+</body>
+
+</html>
